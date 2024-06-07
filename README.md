@@ -3,9 +3,9 @@
 ![image](https://github.com/wadegamache/Azure-SOC-Honeynet/assets/171600915/f230e3f4-76a0-4ad5-a895-9a90e096b636)
 
 
-## Introduction
+## Introduction and Objective
 
-In this project, I built a mini honeynet in Azure and ingested log sources from various resources into a Log Analytics workspace. Those logs were then used by Microsoft Sentinel to build attack maps, trigger alerts, and create incidents. I measured some security metrics in the insecure environment for 24 hours, applied some security controls to harden the environment, measured metrics for another 24 hours, then showed the results below. The metrics that were measured are:
+In this project, I created a mini honeynet in the Microsoft Azure platform. The honeynet consisted of various resources completely open and vulnerable to the public internet. The goal was to capture and analyze logs from these sources and aggregate them to a Log Analytics Workspace. Microsoft Sentinel was then deployed to leverage these logs to build attack maps, trigger alerts, and create incidents. Security metrics were measured in this insecure environment for 24 hours. I then applied security controls to harden the environment, including NIST 800-53. The same security metrics were measured for another 24 hours, within the hardened environment. The objective was to compare the results and understand the effectiveness and importance of proper controls and regulatory standards. The metrics analyzed were:
 
 - SecurityEvent (Windows Event Logs)
 - Syslog (Linux Event Logs)
@@ -53,7 +53,7 @@ Stop Time 2024-05-30 19:45:24
 | SecurityIncident         | 298
 | AzureNetworkAnalytics_CL | 2416
 
-## Attack Maps Before Hardening / Security Controls
+## Attack Maps After Hardening / Security Controls
 
 ```All map queries actually returned no results due to no instances of malicious activity for the 24 hour period after hardening.```
 
