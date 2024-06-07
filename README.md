@@ -30,8 +30,16 @@ For the "BEFORE" metrics, all resources were originally deployed, exposed to the
 
 ## Attack Maps Before Hardening / Security Controls
 ![image](https://github.com/wadegamache/Azure-SOC-Honeynet/assets/171600915/2c87dc78-fd19-4f69-b345-cb940d1b928a)
+
+This map demonstrates the consequences of leaving the Network Security Group (NSG) open, as it allowed for malicious traffic to flow unimpeded.
+
 ![image](https://github.com/wadegamache/Azure-SOC-Honeynet/assets/171600915/65948389-4d70-4153-a3c1-91e0a84ced4d)
+
+This map shows the numerous syslog authentication failures experienced by the Linux server that was deployed. 
+
 ![image](https://github.com/wadegamache/Azure-SOC-Honeynet/assets/171600915/b9c75901-b04d-4bb0-bbe1-44b56ae5acb3)
+
+This map shows the numerous RDP and SMB failures experienced by the Windows virtual machines.
 
 ## Metrics Before Hardening / Security Controls
 
@@ -76,4 +84,4 @@ Stop Time	2024-06-04 15:34:37
 
 ## Conclusion
 
-In this project, a mini honeynet was constructed in Microsoft Azure and log sources were integrated into a Log Analytics workspace. Microsoft Sentinel was employed to trigger alerts and create incidents based on the ingested logs. Additionally, metrics were measured in the insecure environment before security controls were applied, and then again after implementing security measures. It is noteworthy that the number of security events and incidents were drastically reduced after the security controls were applied, demonstrating their effectiveness.
+After reviewing the logs ingested and metrics measured, it's clear to me the importance of security hardening and fortifying an environment's security posture. These security measures are important to mitigate risk and safegaurd valuable data and resources. The effectiveness of even the simplest control can not be understated. The combination of several controls will only strengthen that posture. The metircs measured a 99.99% reduction in events and incidents across the board. It is important to mention that if the network's resources were engaged by regular uers, it's likely that a higher number of secrity events and alerts would have been produced within the 24-hour timeframe post-security control implementation. 
